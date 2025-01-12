@@ -49,7 +49,7 @@ export default function Chat() {
   }, []);
 
   const onValidateOpenaiAPI = (e) => {
-    if (e.target.value.match(/^sk-[a-zA-Z0-9]{32,}$/)) {
+    if (e.target.value.match(/^sk-proj-[a-zA-Z0-9\-_]{32,}$/)) {
       setOpenaiKey(e.target.value);
     } else {
       setOpenaiKey("");
@@ -67,7 +67,7 @@ export default function Chat() {
   return (
     <div className="wrapper">
       <div className="wrapper-header">
-        <h1>Dai</h1>
+        <h1>My Dai ChatBot</h1>
         <button
           className="auth-button auth-button__hover"
           onClick={() => (window.auth.isAuthenticated ? logout() : login())}
@@ -115,7 +115,7 @@ export default function Chat() {
           </div>
           <div className="write">
             <input
-              placeholder="Ask me..."
+              placeholder="Ask me anything...😀"
               type="text"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}

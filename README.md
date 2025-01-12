@@ -29,6 +29,18 @@ To install project dependencies, run the following command:
 npm install
 ```
 
+## **Run ```npm audit fix```**
+- This command attempts to automatically fix vulnerabilities by updating dependencies to secure versions:
+```bash
+npm audit fix
+```
+
+- After running this, check if any vulnerabilities remain by running:
+```bash
+npm audit
+```
+
+
 ## **Run the App Locally**
 
 Before running the app locally, start the local replica with the following command:
